@@ -1,0 +1,206 @@
+Pruebas: proceso para medir la calidad
+Error: Es cometido por el ser humano
+Defecto: error de implementación
+Fallo: se evidencia, y puede ser generado por el ambiente  o por ejecutar código con defectos
+
+Libro: 338 a 344: principios//
+
+
+Normas de calidad: Iso 9000: validacion de las caracteristicas intrincsicasdel software usable seguro
+		   Iso 25000: se despliega de la 9000 y esta tiene unos atributos mas especificos
+(Conformidad y satisfacción)
+
+Iso 9126: Factores claves para garantizar la calidad --Fundamentos	
+	Funcionalidad: requerimentos
+	Confiabilidad: mayor parte de tiempo disponible
+	Usabilidad: Interfaz amigable
+	Eficiencia: Rapidez
+	Mantenibilidad: soporte facíl
+	Portabilidad: usable en difrentes entornos
+
+	Factores de calidad 25010 
+	Adecuación funcional
+	Rendimiento
+	Compatibilidad: interoperable con otros sistemas
+	Usabilidad
+	Fiabilidad: disponible , tolerante a fallos
+	Seguridad
+	Mantenibilidad
+	Portabilidad
+
+Roles software testing
+
+	Desarrolladores
+	Arquitecto Toma de requisitos
+	QA: asegura la calidad
+	tester: probador
+
+Revision técnica formal en el desarrollo de software
+RTF
+Objetivo
+*Descubrir errores, garantizar estandares Normas ISO
+
+Revicion técnica informal
+RTI
+La hacen los desarrolladores de software
+
+Cuales son los pasos o etapas:
+Planeacion y preparación
+Estructura la reunion
+Resaltar los errores
+Hacer las correcciones 
+Verificar las correcciones
+
+Objetivo de la revision
+*hacer que los errores no se conviertan en defectos en etapas superior
+
+STLC
+Analisis de requerimentos: 
+Planificación de pruebas
+Desarrollar casos de pruebas
+Ambiente de configuración
+Ejecución de pruebas
+Cierre del ciclo de las pruebas
+Pruebas de humo : app lista para ejecutarse -- se le hacen pruebas rapidas
+___________________________________________________________________________________________________________
+Tecnicas de caja negra: black boss testing Alternativa de las tecnicas de caja blanca
+
+Validadciones funcionales en donde se revisa datos de entrada y datos de salida: no se puede ver código (se tienen datos de entrada validos e invalidos)
+Son pruebas de comportamiento
+para esto se necesita la data que de ella salen los difrentes tipos de casos de pruebas
+
+estas pruebas se pueden implementar en etapas finales del proyecto
+
+Objetivo encontrar errores asegurar que se comporten segun lo esperado
+
+requisitos: usuario contraseña para acceder a la BD
+
+
+ejemplo cuanta concurrencia aguanta un programa
+
+Intentan descubrir errores en:
+Acceso a bd externas
+Errores de comportamiento y rendimiento
+errores de inicializacion y terinacion
+Funciones incorrectas o faltantes
+Errores  de interfaz
+errores en la estructura de datos acceso a datos(Se mira que la logica es correcta)
+
+Tipos de pruebas de caja negra
+
+Prueba funcional
+Pruebbas no funcionales
+
+Tecnicas de caja negra Neesitamos datos de entrada y de salida
+
+Particion de equivalencias:
+	Buscar varios valores de entrada los validos y los invalidos 
+	Apartir de una sentencia evaluar los difrentes tipos de clases(invalido , valido, invalido)
+	Caso de prueba que indique un dato invalido o uno valido
+	para cada clase sale un caso de prueba
+analisisde valor limite:
+	Se presentan errores en las cantidades limites Clases invalidas(limite inferior, limite posterior)
+	Valores cercanos al limite
+pruebas de tablas de desicion: con operadores lógicos
+	si entonces
+pruebas de trancision estatal de estados
+error al adivinar
+Metodos de pruebas basados en Graficos
+pruebas de comparación
+___________________________________________________________________________________________________________
+
+Tecnicas de caja blanca
+pruebas de componentes  de Integracion y de sistema, unitarias
+Es requisito que el testar tenga conocimientos en programación y el lenguaje que se implemento
+Representacion de las pruebas
+grafo de flujo (CFG)
+caminos por donde pasa durante su ejecución
+Conformado por nodos aristas y nodos predicados tienen una condicional if then (numero de nodos predicados +1)
+
+Tecnicas_____
+Metodo de ruta basica 
+Ruta de caminos independientes
+cada ruta es un caso de prueba
+Como saber cuantas rutas buscar
+ V(G)=E -N+2
+tecnica cobertura de sentencia: se prueba que se haya pasado por todos los nodos
+Cobertura de decision: brand hoder
+
+Herramientas para Tecnicas de caja blanca
+Junit para java
+
+
+hallar la complejidad ciclomatica
+sentencia, desicion, camino y verdadero falso 
+3 algoritmos y por cada uno sacar cada tecnica
+de 3 requisitos
+
+
+Python -m pip 
+coverage genera informes en 
+coverage report m 
+Libreria unitset
+
+---------------------------------------------------------------------
+en e2e crear archivo de prueba .cy.js
+crear un set de pruebas
+
+ejecutar pruebas
+npx cypress open
+
+
+describe("text set prueba", function(){
+	crear una prueba especifica
+	it("trasnferencia de fondos" ,function(){
+		visitar el sitio
+		cy.visit("URL pagina")
+		copiar objeto ).click()//realiza click
+		ubic objeto txt).type("Username")//escribame aqui
+		captura boton submit).click()
+		.click()
+		seleccionar lista).select(3)
+		//
+		alert--label).should("contain.text","texto que debe contener el label")
+		
+	})
+})
+
+//prueba para validar estilos
+
+describe ("prueba estilos",function(){
+	it("prueba estilo 1", function(){
+		 obtengo elemneto).should("have.css" , "tipo letra1).and("match",/otra letra/)
+	})
+
+	it("prueba clase",function(){
+		vistoto la pagina
+		.shoul("have.class","nombre de la clase")
+	})
+})
+//browser developer tools
+
+Testtrail
+Prueba gratis
+test case / agregar case poner nombre/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

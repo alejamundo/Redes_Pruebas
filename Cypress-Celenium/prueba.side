@@ -1,0 +1,108 @@
+{
+  "id": "b106b2dc-06f1-4570-8fe3-19c28b8c6a71",
+  "version": "2.0",
+  "name": "prueba",
+  "url": "",
+  "tests": [{
+    "id": "dd006f64-b2c4-491f-85f2-61def4d131bd",
+    "name": "Untitled",
+    "commands": [{
+      "id": "da1f6f1a-1a78-4fcf-aa3c-aaab49561589",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/?&tag=googleuscol05-20&ref=pd_sl_7d0mn8q9wb_e&adgrpid=83627296251&hvpone=&hvptwo=&hvadid=602537718406&hvpos=&hvnetw=g&hvrand=4545432448697261272&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1003654&hvtargid=kwd-10573980&hydadcr=8635_13554488&language=es_US",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9678c98-ab01-4353-98b0-ffd47c5ab611",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b88ca05c-8008-4499-b2d9-bcaf4b69ef1e",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "Amazon.com. Gasta menos. Sonríe más.",
+      "targets": [],
+      "value": "titulo_pagina"
+    }, {
+      "id": "2d2abedd-1bba-47f0-bfce-963550ab23d5",
+      "comment": "",
+      "command": "echo",
+      "target": "${titulo_pagina}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdf78b5e-9df5-403d-8466-58771f437576",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#nav-cart-text-container > .nav-line-2",
+      "targets": [
+        ["css=#nav-cart-text-container > .nav-line-2", "css:finder"],
+        ["xpath=//div[@id='nav-cart-text-container']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Carrito')]", "xpath:innerText"]
+      ],
+      "value": "texto1"
+    }, {
+      "id": "621a9865-240b-4a85-a6d1-29ec41bc1c3c",
+      "comment": "",
+      "command": "echo",
+      "target": "${texto1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a2b7a90-dac9-4c56-8d36-2ca3740db3ae",
+      "comment": "",
+      "command": "store",
+      "target": "Llegaste aqui",
+      "targets": [],
+      "value": "string"
+    }, {
+      "id": "201116f4-09e6-42c5-8152-332632c6fffa",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Amazon.com. Gasta menos. Sonríe más.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69016030-4a2c-4064-bc4c-d859fe3b0906",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=nav-logo-sprites",
+      "targets": [
+        ["id=nav-logo-sprites", "id"],
+        ["css=#nav-logo-sprites", "css:finder"],
+        ["xpath=//a[@id='nav-logo-sprites']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-logo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/-/es/ref=nav_logo')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83f0db24-682c-46b1-8b07-3537c3fc5a1b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(3) > .navFooterDescItem:nth-child(5) > .nav_a",
+      "targets": [
+        ["css=tr:nth-child(3) > .navFooterDescItem:nth-child(5) > .nav_a", "css:finder"],
+        ["xpath=//div[@id='navFooter']/div[4]/table/tbody/tr[3]/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/-/es/services?ref_=footer_services')]", "xpath:href"],
+        ["xpath=//tr[3]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "665be0ab-7342-4e18-be6a-679c0d1af9e0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dd006f64-b2c4-491f-85f2-61def4d131bd"]
+  }],
+  "urls": [],
+  "plugins": []
+}
